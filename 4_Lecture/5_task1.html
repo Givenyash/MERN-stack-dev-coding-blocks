@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medium Core Layout System</title>
+  
+  <!-- Icon Framework Integration -->
+  <link rel="stylesheet" href="https://cloudflare.com">
+  
+  <style>
+    /* ==========================================
+       1. CORE CONCEPTS & CSS BOX MODEL RESET
+       ========================================== */
+    * {
+      /* Box Model configuration ensures padding and borders do not change final width/height calculations */
+      box-sizing: border-box; 
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #ffffff;
+      color: #242424;
+    }
+
+    /* ==========================================
+       2. CSS POSITIONING (Layout Framework)
+       ========================================== */
+    
+    /* Fixed positioning isolates the Header at the top of the viewport */
+    .app-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 57px;
+      z-index: 10;
+      background-color: #ffffff;
+      
+      /* Box Model properties */
+      border-bottom: 1px solid #f2f2f2;
+      padding: 0 24px;
+      
+      /* Flexbox Layout model for horizontal alignment */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Fixed positioning pins the navigation sidebar to the left margin */
+    .app-sidebar {
+      position: fixed;
+      top: 57px; /* Offset cleanly below the header height */
+      left: 0;
+      width: 240px;
+      height: calc(100vh - 57px); /* Fills remaining viewport space */
+      z-index: 5;
+      background-color: #ffffff;
+      
+      /* Box Model properties */
+      border-right: 1px solid #f2f2f2;
+      padding: 24px 0;
+    }
+
+    /* Standard block margin offset clears space for the fixed components */
+    .app-main-content {
+      margin-top: 57px;  /* Clears Header height */
+      margin-left: 240px; /* Clears Sidebar width */
+      
+      /* Box Model configurations */
+      max-width: 740px;
+      padding: 24px 48px;
+    }
+
+    /* ==========================================
+       3. CSS LAYOUTS (Component Flexbox Rules)
+       ========================================== */
+    
+    /* Header Child Layouts */
+    .header-left, .header-right, .search-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .header-left { gap: 16px; }
+    .header-right { gap: 12px; font-size: 13px; }
+    
+    .logo-text {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    /* Search Component with Relative-Absolute Positioning */
+    .search-container {
+      position: relative; /* Anchor framework for the absolute icon inside */
+    }
+    
+    .search-container i {
+      position: absolute;
+      left: 14px;
+      color: #6b6b6b;
+    }
+    
+    .search-input {
+      width: 180px;
+      height: 38px;
+      background-color: #fafafa;
+      border: none;
+      border-radius: 20px;
+      padding: 0 16px 0 38px; /* Extra left padding avoids text collision with icon */
+      outline: none;
+    }
+
+    /* Sidebar Link items */
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 24px;
+      color: #6b6b6b;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    
+    .nav-item.active, .nav-item:hover {
+      color: #000000;
+      font-weight: 500;
+    }
+    
+    .nav-item i {
+      font-size: 18px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .sidebar-divider {
+      border: 0;
+      border-top: 1px solid #f2f2f2;
+      margin: 16px 24px;
+    }
+    
+    .sidebar-promo-text {
+      padding: 0 24px;
+      font-size: 13px;
+      color: #6b6b6b;
+      line-height: 1.5;
+    }
+
+    /* Feed Layout Structure */
+    .feed-tabs {
+      display: flex;
+      gap: 32px;
+      border-bottom: 1px solid #f2f2f2;
+      margin-bottom: 32px;
+    }
+    
+    .tab-link {
+      padding-bottom: 16px;
+      font-size: 14px;
+      color: #6b6b6b;
+      text-decoration: none;
+    }
+    
+    .tab-link.active {
+      color: #242424;
+      border-bottom: 1px solid #242424; /* Visual Indicator underline */
+    }
+
+    /* Article Card Layout (Flex rows split into descriptive block left and image block right) */
+    .story-card {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid #fafafa;
+    }
+    
+    .story-details {
+      flex: 1; /* Automatically consumes available horizontal space */
+    }
+    
+    .meta-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    
+    .avatar-placeholder {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #6b6b6b;
+    }
+
+    .story-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      line-height: 24px;
+    }
+    
+    .story-snippet {
+      font-size: 14px;
+      color: #6b6b6b;
+      margin-bottom: 20px;
+      line-height: 20px;
+    }
+
+    /* Footer Toolbar controls */
+    .toolbar-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #6b6b6b;
+      font-size: 13px;
+    }
+    
+    .toolbar-left, .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Fixed Aspect Ratio Thumbnail Block */
+    .story-media {
+      width: 112px;
+      height: 112px;
+      background-color: #0a1128;
+      color: #ffffff;
+      
+      /* Box layout internals */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LAYER 1: FIXED GLOBAL CONTAINER HEADER -->
+  <header class="app-header">
+    <div class="header-left">
+      <i class="fa-solid fa-bars" style="font-size: 18px;"></i>
+      <span class="logo-text">Medium</span>
+      <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="search-input" placeholder="Search">
+      </div>
+    </div>
+    
+    <div class="header-right">
+      <i class="fa-solid fa-wand-magic-sparkles" style="color: #ffc017;"></i>
+      <span>Get unlimited access for less than $1/week. <a href="#" style="color: #242424;">Become a member</a></span>
+    </div>
+  </header>
+
+  <!-- LAYER 2: FIXED VERTICAL VIEWPORT NAVIGATION -->
+  <nav class="app-sidebar">
+    <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="#" class="nav-item"><i class="fa-regular fa-bookmark"></i> Library</a>
+    <a href="#" class="nav-item"><i class="fa-regular fa-user"></i> Profile</a>
+    <a href="#" class="nav-item"><i class="fa-regular fa-file-lines"></i> Stories</a>
+    <a href="#" class="nav-item"><i class="fa-solid fa-chart-line"></i> Stats</a>
+    
+    <hr class="sidebar-divider">
+    
+    <a href="#" class="nav-item"><i class="fa-regular fa-circle-user"></i> Following</a>
+    
+    <div class="sidebar-promo-text">
+      <p style="margin-bottom: 6px;">Find writers and publications to follow.</p>
+      <a href="#" style="color: #1a8917; text-decoration: none;">See suggestions</a>
+    </div>
+  </nav>
+
+  <!-- LAYER 3: SCROLLABLE DYNAMIC BODY CONTENT -->
+  <main class="app-main-content">
+    
+    <!-- Segment Navigation Component -->
+    <div class="feed-tabs">
+      <a href="#" class="tab-link active">For you</a>
+      <a href="#" class="tab-link">Featured</a>
+    </div>
+
+    <!-- Feed Iteration Entry 1 -->
+    <article class="story-card">
+      <div class="story-details">
+        <div class="meta-row">
+          <div class="avatar-placeholder"></div>
+          <span style="font-weight: 500;">Leo Godin</span>
+          <span style="color: #6b6b6b;">· Mar 2</span>
+        </div>
+        <h2 class="story-title">Claude Code is Great</h2>
+        <p class="story-snippet">You Just Need to Learn How to Use It</p>
+        
+        <div class="toolbar-row">
+          <div class="toolbar-left">
+            <i class="fa-solid fa-star" style="color: #ffc017;"></i>
+            <span><i class="fa-regular fa-hand"></i> 5K</span>
+            <span><i class="fa-regular fa-comment"></i> 149</span>
+          </div>
+          <div class="toolbar-right">
+            <i class="fa-regular fa-circle-minus"></i>
+            <i class="fa-regular fa-bookmark"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+      
+      <div class="story-media">
+        USING LLMs IS A SKILL
+      </div>
+    </article>
+
+    <!-- Feed Iteration Entry 2 -->
+    <article class="story-card">
+      <div class="story-details">
+        <div class="meta-row" style="color: #6b6b6b;">
+          <i class="fa-solid fa-book-open"></i> In Data Science Collective by Marina Wyss · Feb 23
+        </div>
+        <h2 class="story-title">Should You Still Learn to Code in 2026?</h2>
+        <p class="story-snippet">The answer isn't as obvious as I used to believe.</p>
+        
+        <div class="toolbar-row">
+          <div class="toolbar-left">
+            <i class="fa-solid fa-star" style="color: #ffc017;"></i>
+            <span><i class="fa-regular fa-hand"></i> 3.5K</span>
+            <span><i class="fa-regular fa-comment"></i> 176</span>
+          </div>
+          <div class="toolbar-right">
+            <i class="fa-regular fa-circle-minus"></i>
+            <i class="fa-regular fa-bookmark"></i>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+      
+      <div class="story-media" style="background-color: #242424;">
+        CODE 2026
+      </div>
+    </article>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    padding:30px;
+}
+
+/* =====================
+   BOX MODEL
+===================== */
+
+.box-model{
+    margin-bottom:50px;
+}
+
+.card{
+    width:600px;
+
+    padding:20px;
+
+    border:2px solid green;
+
+    border-radius:12px;
+
+    margin:20px auto;
+
+    background:#f0fdf4;
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.icon{
+    font-size:50px;
+}
+
+/* =====================
+   POSITIONING
+===================== */
+
+.parent{
+    height:300px;
+
+    border:2px solid #a89e9e;
+
+    position:relative;
+
+    background-color: rgb(213, 238, 176);
+
+    margin-bottom:50px;
+}
+
+.box{
+    width:140px;
+    height:60px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:8px;
+}
+
+.top-left{
+    position:absolute;
+    top:20px;
+    left:20px;
+
+    background:lavender;
+}
+
+.center{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%, -50%);
+
+    background:pink;
+}
+
+.bottom-right{
+    position:absolute;
+
+    bottom:20px;
+    right:20px;
+
+    background:lightblue;
+}
+
+/* =====================
+   FLEXBOX LAYOUT
+===================== */
+
+.website{
+    border:1px solid #ddd;
+}
+
+/* Header */
+
+header{
+    background:#a08cf3;
+    color:white;
+
+    padding:20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+/* Cards */
+
+main{
+    padding:20px;
+
+    display:flex;
+    gap:20px;
+}
+
+.card-item{
+    flex:1;
+
+    border:1px solid #ddd;
+
+    padding:20px;
+
+    text-align:center;
+
+    border-radius:10px;
+}
+
+/* Footer */
+
+footer{
+    background:#444;
+    color:white;
+
+    text-align:center;
+
+    padding:15px;
+}

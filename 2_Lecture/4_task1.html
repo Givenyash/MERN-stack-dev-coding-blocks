@@ -1,0 +1,74 @@
+<!--Make a form incluse first name , middle name , last name, phone number, email, description, password, submit button-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .name{
+            color: chocolate;
+        }
+        .num{
+            color: rgb(234, 219, 7);
+        }
+        .mail{
+            color: darksalmon;
+        }
+        .box{
+            color: deeppink;
+        }
+        .pass{
+            color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="POST" class="form-example">
+
+  <div class="name">
+    <label for="First name" >Enter first name: </label>
+    <input type="text" name="first name" id="first name" placeholder="First name..." required />
+  </div> <br>
+
+  <div class="name">
+    <label for="Middle name">Enter middle name: </label>
+    <input type="text" name="middle name" id="middle name" placeholder="Middle name..." required />
+  </div> <br>
+
+  <div class="name">
+    <label for="Last name">Enter last name: </label>
+    <input type="text" name=" last name" id=" last name" placeholder="Last name..." required />
+  </div> <br>
+
+  <div class="num">
+    <label for="number">Enter whatsapp number: </label>
+    <input type="number" name="whatsapp number" id="whatsapp number" placeholder="Ph. no." required />
+  </div> <br>
+
+  <div class="mail">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" placeholder="e-mail" required />
+  </div> <br>
+
+  <div class="box">
+    <textarea id="story" name="story" rows="5" cols="33" required>
+         Add description...
+    </textarea>
+  </div> <br>
+
+  <div class="pass">
+    <label for="password">Enter password: </label>
+    <input type="password" name="password" id="password" placeholder="password..." required />
+  </div> <br>
+
+  <div class="sub">
+    <input type="submit" value="Submit!" />
+  </div> <br>
+
+</form>
+</body>
+</html>

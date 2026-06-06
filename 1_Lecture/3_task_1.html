@@ -1,0 +1,177 @@
+<!--create a basic HTML page with heading, paragraph, image, and list-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .Red{
+            color: rgb(219, 35, 22);
+            background: #9c9494;
+        }
+        .Green{
+            color: darkgreen;
+            background: #80928f;
+        }
+        #A{
+            color: deeppink;
+            background: #d8d4d4;
+        }
+        .Spn{
+            color: rgb(225, 21, 21);
+        }
+    </style>
+</head>
+<body>
+    
+    <p><h2>Home-Work</h2></p>
+
+        <p><h3>About List tag</h3></p>
+
+        <p>Ordered List</p>
+        <ol>
+            <li>Learn about ordered list.</li>
+            <li>Learn about types of list.</li>
+            <li>It can be represented by numbers as well as alphabet lettersli>
+        </ol>
+
+        <p>Example</p>
+        <ol type="1">
+            <li>this is numeric list.</li>
+        </ol>
+
+        <ol type="a">
+            <li>this is alphabetic lower case list</li>
+        </ol>
+
+        <p>Unordered List</p>
+        <ul>
+            <li>This is unordered list.</li>
+            <li>Unordered list follows sequence of number.</li>
+            <li>It can be represented by (buttet points) square pr triangle or circle patterns.</li>
+        </ul>
+
+        <p>Example</p>
+        <ul style="list-style-type: square;">
+            <li>this is numeric list.</li>
+        </ul>
+
+        <ul style="list-style-type: circle;">
+            <li>this is alphabetic lower case list</li>
+        </ul>
+
+
+        <!--Div-->
+        <p><h3>About div tag</h3></p>
+        <p>
+            The div tag in HTML is used to 
+            <div style="color: rgb(220, 175, 27); background: #83597a;">Color specific text </div>
+            on the HTML page using CSS (in-line or internal css).
+        </p>
+
+        <p>
+            The div tag is used with Attribute like class and id, which specifies the div with each other.
+        </p>
+
+        <p>Example</p>
+        <div class="Red">
+            <p>Using class = Red, we can color all divisions which are class = Red</p>
+        </div>
+
+        <div class="Green">
+            <p>If class = Green, then we can color all divisions which contains Attribute class = Green.</p>
+        </div>
+        <div class="Red">
+            <p>This is also same class Red.</p>
+        </div>
+
+        <div class="Green">
+            <p>This is same class Green.</p>
+        </div>
+
+        <div id="A">
+            <p>This tag is uses id attribute which is unique.</p>
+        </div>
+
+        <span class="Spn">
+            <p>Span is same as div used for styling.</p>
+            <p>Span is Inline - element.</p>
+            <p>Div is Block element.</p>
+        </span>
+
+        <!--Paragragh-->
+
+        <p><h3>About Paragraph tag</h3></p>
+
+        <p>The HTML element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields.</p>
+
+
+        <!--Other Tags-->
+
+        <h2>Other tags</h2>
+
+        <!--Headings-->
+<h1></h1> <!--Thickest-->
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6> <!--Thinest-->
+
+<!--Paragraph-->
+<p>This is not bold by default</p>
+
+<!--Link using anchor tags-->
+<!--href is absolute URL , specifies the destination address.-->
+
+<!--Attributes 
+  href
+  download
+  target -> black , self , etc
+
+  Read more tags
+-->
+
+<!--Image tag , void element-->
+<img src="C:\Users\yashm\OneDrive\Desktop\MERN stack dev coding blocks\1_Lecture\car_image.jpeg" alt="BMW Car"> <br>
+
+<img
+  class="fit-picture"
+  src="/shared-assets/images/examples/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+
+<!--Attributes in image
+   src
+   alt
+   width 
+   height
+   srcset
+
+   search more
+-->
+<!--98vw means 98% of the view post ,(web page)-->
+
+
+<!--Other tags-->
+<mark>It is used for Highlighting</mark>
+<b>Bold</b>
+<u>Underline</u>
+
+<p>32 in the power of 2 = 2<sup>5</sup></p>
+<p>Water is represented in the formula of : H<sub>2</sub>O</p>
+
+<p><s>There will be a few tickets available at the box office tonight.</s></p>
+<p>SOLD OUT!</p>
+
+<i>Italic</i>
+<ins>Insert</ins>
+<del>Deleted</del>
+
+<p>Hello my name is <abbr style="color: rgb(212, 54, 11);" title="Cascading style sheet">CSS </abbr> </p>
+
+
+</body>
+</html>

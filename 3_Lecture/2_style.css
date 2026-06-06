@@ -1,0 +1,31 @@
+b{
+    color: aqua;
+    background: #908a91;
+    border: solid black;
+}
+
+.qualified{
+    color: rgb(252, 55, 0);
+    background: #0fd205;
+    font-family: 'Segoe UI';
+}
+.disqualified{
+    color: rgb(40, 40, 38);
+    background: #97b496;
+    font-family: sans-serif;
+}
+
+div div div p{
+    color: crimson;
+    background: gray;
+    border: solid black;
+}
+
+*{
+    background: #8d5959;
+}
+
+div > p{
+    color: gold;
+    background-color: deepskyblue;
+}
