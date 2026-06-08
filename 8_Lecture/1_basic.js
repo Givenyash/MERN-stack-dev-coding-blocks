@@ -63,4 +63,4 @@ for(let i = 5 - 1; i >= 1; i--) {    // descreasing order me print krra hai
     }
 
     console.log(row);
-}
+} 
