@@ -47,3 +47,42 @@
   width:100%;
   margin-left: 10px;
 }
+
+.nav-right{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.get-app{
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.nav-right a{
+  text-decoration: none;
+  color: #6b6b6b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-right .fa-bell{
+  font-size: 20px;
+  color: #6b6b6b;
+  cursor: pointer;
+}
+
+.nav-right img{
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
