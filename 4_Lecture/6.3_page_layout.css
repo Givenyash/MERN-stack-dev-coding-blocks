@@ -4,13 +4,14 @@
 
 .content{
     flex: 1;
-    padding: 40px 80px;
+    padding: 15px 50px;
 }
 
 .tabs{
     display: flex;
-    gap: 40px;
-    margin-bottom: 18px;
+    gap: 35px;
+    margin-top: 25px;
+    margin-bottom: 0;
 }
 
 .tabs span{
@@ -20,6 +21,8 @@
 
 .active-tab{
     color: black;
+    border-bottom: 2px solid black;
+    padding-bottom: 14px;
 }
 
 .content-divider{
@@ -28,15 +31,15 @@
 }
 
 .article-image img{
-    width: 220px;
-    height: 140px;
+    width: 170px;
+    height: 115px;
     object-fit: cover;
 }
 
 .article-card{
     display: flex;
     align-items: center;
-    padding: 35px 0;
+    padding: 25px 0;
     border-bottom: 1px solid #e6e6e6;
     justify-content: space-between;
 }
@@ -46,11 +49,31 @@
 }
 
 .article-info h2{
-    font-size: 32px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 8px;
 }
 
 .article-info p{
-    font-size: 20px;
+    font-size: 16px;
     color: #6b6b6b;
+}
+
+.article-author{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-size: 14px;
+    color: #6b6b6b;
+    margin-bottom: 12px;
+}
+
+.article-author i{
+    font-size: 15px;
+    color: #6b6b6b;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
