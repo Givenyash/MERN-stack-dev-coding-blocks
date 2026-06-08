@@ -26,4 +26,4 @@ function user(add){
     console.log(add); 
 }
 
-user(add(10.5))
+user(add(10.5)) 
