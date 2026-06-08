@@ -1,12 +1,11 @@
 .sidebar{
     display: flex;
     flex-direction: column;
-    width: 240px;
-    height: 100vh;
+    width: 210px;
     padding: 30px 22px;
     gap: 13px;
     border-right: 2px solid #eceaea;
-}
+} 
 
 .menu-item{
     text-decoration: none;
