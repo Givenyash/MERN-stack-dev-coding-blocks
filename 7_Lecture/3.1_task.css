@@ -370,7 +370,6 @@ nav{
     border-radius:20px;
     border:2px solid #ececec;
 }
-
 .scroll-content::-webkit-scrollbar-thumb:hover{
     background:#8d8d8d;
 }
