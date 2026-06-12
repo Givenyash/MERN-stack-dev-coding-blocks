@@ -7,7 +7,6 @@
 html,
 body{
     height:100%;
-    overflow:hidden;
 }
 
 nav{
@@ -98,16 +97,19 @@ nav{
 
 .left-sidebar{
     width:90px;
-    height: 100%;
+    height:100%;
     background:white;
     border-right:1px solid #ddd;
 
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:25px;
+
+    gap:16px;
 
     padding-top:20px;
+
+    overflow-y:auto;
 }
 
 .tool-item{
@@ -121,18 +123,27 @@ nav{
 }
 
 .tool-item i{
-    font-size:22px;
+    font-size:20px;
 }
 
 .tool-item span{
-    font-size:12px;
+    font-size:11px;
+    text-align:center;
+    line-height:1.2;
 }
 
 .content-panel{
-    width:320px;
+    width:420px;
     background:white;
     border-right:1px solid #ddd;
-    padding:15px;
+    padding:8px;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+
+    min-height:0;
 }
 
 .search-box input{
@@ -156,40 +167,34 @@ nav{
 
 .template-grid{
     display:grid;
-
     grid-template-columns:1fr 1fr;
+    gap:8px;
 
-    gap:12px;
-
-    margin-top:20px;
+    padding-right:4px;
 }
 
 .template-card{
-    height:120px;
-
-    border-radius:12px;
-
-    background:#dfe4ff;
-
+    height:78px;
+    border-radius:10px;
+    background:#e8e8e8;
     cursor:pointer;
 }
 
 .canvas-area{
-    flex:1;
-
-    background:#ececf1;
+    background:#f3f3f7;
 
     display:flex;
 
     justify-content:center;
 
-    align-items:center;
+    align-items:flex-start;
+    padding: 80px;
 }
 
 .canvas-page{
-    width:700px;
+    width:1080px;
 
-    height:450px;
+    height:607px;
 
     background:white;
 
@@ -202,20 +207,25 @@ nav{
     display:flex;
     align-items:center;
 
+    height:50px;
+
+    border:1px solid #dcdcdc;
+
+    border-radius:18px;
+
     background:white;
 
-    border-radius:14px;
+    padding:0 16px;
 
-    padding:8px 12px;
-
-    border:1px solid #ddd;
-
-    margin-bottom:15px;
+    margin-bottom:10px;
 }
 
 .search-box i{
-    color:#666;
-    font-size:14px;
+    font-size:18px;
+
+    color:#222;
+
+    cursor:pointer;
 }
 
 .search-box input{
@@ -224,25 +234,15 @@ nav{
     background:transparent;
 
     width:100%;
-    font-size:14px;
+    font-size:16px;
 }
 
 .plus-btn{
-    width:32px;
-    height:32px;
-
     border:none;
-
-    border-radius:8px;
-
-    background:#111;
-
-    color:white;
-
-    font-size:20px;
-
+    background:transparent;
+    font-size:28px;
+    color:#222;
     cursor:pointer;
-
     margin-right:10px;
 }
 
@@ -253,9 +253,9 @@ nav{
 
     outline:none;
 
-    font-size:14px;
-
     background:transparent;
+
+    font-size:16px;
 }
 
 .search-box i{
@@ -269,38 +269,33 @@ nav{
 .action-buttons{
     display:flex;
 
-    gap:10px;
+    gap:8px;
 
-    margin-bottom:25px;
+    margin-bottom:10px;
 }
 
 .generate-btn{
     flex:1;
-
-    border:none;
-
-    background:#7c3aed;
-
-    color:white;
-
-    padding:10px;
-
-    border-radius:12px;
-
+    border:1px solid #ddd;
+    background:white;
+    color:#111;
+    height:42px;
+    border-radius:14px;
     font-weight:600;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
 }
 
 .search-btn{
     flex:1;
-
-    border:1px solid #ddd;
-
-    background:white;
-
-    padding:10px;
-
-    border-radius:12px;
-
+    border:none;
+    background:linear-gradient(to right,#8b5cf6,#7c3aed);
+    color:white;
+    height:42px;
+    border-radius:14px;
     font-weight:600;
 }
 
@@ -311,7 +306,25 @@ nav{
 
     align-items:center;
 
-    margin-bottom:20px;
+    margin-bottom:8px;
+
+    flex-shrink:0;
+
+}
+
+.recently-used-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-bottom:2px;
+    flex-shrink:0;
+}
+
+.recent-card{
+    height:80px;
+    border-radius:12px;
+    background:#e8e8e8;
+    cursor:pointer;
 }
 
 .recent-row h6{
@@ -325,11 +338,39 @@ nav{
 
     font-size:12px;
 
-    color:#666;
+    font-weight: 700;
+
+    color:#333;
 }
 
 .results-title{
     font-weight:600;
+    margin-bottom:2px;
+    margin-top:0;
+}
 
-    margin-bottom:20px;
+.scroll-content{
+    flex:1;
+    overflow-y:auto;
+    min-height:0;
+
+    padding-right:4px;
+}
+
+.scroll-content::-webkit-scrollbar{
+    width:14px;
+}
+
+.scroll-content::-webkit-scrollbar-track{
+    background:#ececec;
+}
+
+.scroll-content::-webkit-scrollbar-thumb{
+    background:#9d9d9d;
+    border-radius:20px;
+    border:2px solid #ececec;
+}
+
+.scroll-content::-webkit-scrollbar-thumb:hover{
+    background:#8d8d8d;
 }
