@@ -222,4 +222,4 @@ let bill2 = billing(
 );
 
 console.log(patientRecord("P2"));
-console.log(processPayment(bill2));
+console.log(processPayment(bill2)); 
