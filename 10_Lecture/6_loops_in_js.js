@@ -20,4 +20,4 @@ console.log(" ");
 // for each
 Array.forEach(function(i){
     console.log(i);
-})
+}) 
