@@ -59,4 +59,4 @@ const e = arr.every(function(x){
 const edemo = arr.every(x => x>5);
 
 console.log(e);
-console.log(edemo);
+console.log(edemo); 
