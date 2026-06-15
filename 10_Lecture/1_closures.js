@@ -59,4 +59,4 @@ function createBankAccount(InitialBalance){
 const account = createBankAccount(2000);
 console.log(" ");
 account.deposite(500);
-account.withdraw(300);
+account.withdraw(300); 
