@@ -7,4 +7,4 @@ function multiplier(factor){
 }
 
 const t = multiplier(3);
-console.log(t(10));
+console.log(t(10)); 
