@@ -5,7 +5,7 @@ const results = [
     { name: "B", marks: 75 }, 
     { name: "C", marks: 45 },
     { name: "D", marks: 25} 
-]
+];
 
 const passStudents = results
 .filter(num =>num.marks >= 40)
