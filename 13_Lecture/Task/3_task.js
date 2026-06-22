@@ -56,4 +56,4 @@ step1()
     })
     .then(function(){
         return step3();
-    });
+    }); 
