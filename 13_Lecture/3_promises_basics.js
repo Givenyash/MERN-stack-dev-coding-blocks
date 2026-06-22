@@ -15,4 +15,4 @@ promise.then(result=>{
 })
 .finally(()=>{
     console.log("Ho gaya ab");
-})
+}) 
