@@ -27,4 +27,4 @@ function server3(){
 Promise.race([server1(), server2(), server3()])
     .then(function(result){
         console.log(result);
-    });
+    }); 
