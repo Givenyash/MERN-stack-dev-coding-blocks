@@ -35,4 +35,4 @@ getMarks()
     })
     .then(function(grade){
         console.log("Grade:", grade);
-    });
+    }); 
