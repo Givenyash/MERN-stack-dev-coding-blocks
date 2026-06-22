@@ -33,4 +33,4 @@ addToCart()
     })
     .then(function(){
         return placeOrder();
-    });
+    }); 
