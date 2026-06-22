@@ -27,4 +27,4 @@ function getComments(){
 Promise.all([getUser(), getPosts(), getComments()])
     .then(function(result){
         console.log(result);
-    });
+    }); 
