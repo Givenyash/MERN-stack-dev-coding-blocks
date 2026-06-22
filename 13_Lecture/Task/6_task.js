@@ -33,4 +33,4 @@ selectMovie()
     })
     .then(function(){
         return makePayment();
-    });
+    }); 
