@@ -24,4 +24,4 @@ login(function(){
     getProfile(function(){
         getPosts();
     });
-});
+}); 
