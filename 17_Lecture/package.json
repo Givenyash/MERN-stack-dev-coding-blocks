@@ -1,0 +1,13 @@
+{
+  "name": "17_lecture",
+  "version": "1.0.0",
+  "description": "Creating server for task using node.js",
+  "keywords": [],
+  "license": "ISC",
+  "author": "Yash Gautam",
+  "type": "module",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
